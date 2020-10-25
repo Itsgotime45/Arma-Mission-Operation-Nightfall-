@@ -1,0 +1,165 @@
+//hello world
+//#include "modules\grad-moneymenu\grad_moneymenu.hpp"
+
+class CfgFunctions
+{
+	#include "modules\grad-persistence\cfgFunctions.hpp"
+};
+
+//grad_moneymenu
+
+#include "modules\grad-moneymenu\grad_moneymenu.hpp"
+
+class CfgFunctions {
+    #include "modules\grad-moneymenu\cfgFunctions.hpp"
+};
+
+//grad_listBuymenu
+
+#include "modules\grad-listBuymenu\grad_listBuymenu.hpp"
+
+class CfgFunctions {
+    #include "modules\grad-listBuymenu\cfgFunctions.hpp"
+};
+
+//grad_listBuymenu Congfiguration
+
+class CfgGradBuymenu {
+	vechileMakers = 1;
+	tracking = 1;
+	trackingtag = "empty";
+
+	//buyables set
+		class Militia {
+			class units{
+				displayname = "Units"
+				kindof = "Units"
+
+				//Units in this category
+				//Rifleman
+				class Rifleman {
+					displayname = "Rifleman (x20)";
+					description = "Bread and butter of the Militia";
+					Price = 300;
+					amount = 20;
+					stock = 20;
+					code = "{()}()"
+				};
+
+				//Pointman
+				class Pointman {
+					displayname = "Pointman (x20)";
+					description = "Pointman of the Militia";
+					Price = 300;
+					amount = 20;
+					stock = 20;
+					code = "{()}()"
+				};
+
+				//Marksman
+
+				class Marksmen {
+					displayname = "Marksmen (x20)";
+					description = "Marksmen of the Militia";
+					Price = 300;
+					amount = 20;
+					stock = 20;
+					code = "{()}()"
+				};
+
+				//Sniper
+				class Sniper {
+					displayname = "Sniper (x20)";
+					description = "Sniper of the Militia";
+					Price = 300;
+					amount = 20;
+					stock = 20;
+					code = "{()}()"
+				};
+
+				//LMG Support
+				class LMGSupport {
+					displayname = "LMGSupport (x20)";
+					description = "LMGSupport of the Militia";
+					Price = 300;
+					amount = 20;
+					stock = 20;
+					code = "{()}()"
+
+				};
+
+				//Medic
+				class Medic {
+					displayname = "Medic (x20)";
+					description = "Medic of the Militia";
+					Price = 300;
+					amount = 20;
+					stock = 20;
+					code = "{()}()"
+
+				};
+
+			};
+
+		};
+}
+
+
+
+
+//enableDebugConsole = 2;
+// Slaynomore code for CfgGradPersistence /*
+
+class CfgGradPersistence {
+    missionTag = "empty";
+    loadOnMissionStart = 1;
+    missionWaitCondition = "true";
+    playerWaitCondition = "true";
+    saveUnits = 0;
+    saveVehicles = 2;
+    saveContainers = 2;
+    saveStatics = 3;
+    saveMarkers = 0;
+    saveTasks = 0;
+    saveTriggers = 0;
+    savePlayerInventory = 1;
+    savePlayerDamage = 0;
+    savePlayerPosition = 1;
+    savePlayerMoney = 1;
+    saveTeamAccounts = 1;
+    saveTimeAndDate = 1;
+
+    blacklist[] = {
+        "B_Truck_01_mover_F",
+        "MapBoard_seismic_F"
+    };
+
+    class customVariables {
+        class playercurrency {
+            varName = "playercurrency";
+            varNamespace = "player";
+            public = 1;
+        };
+        class totalcurrency {
+            varName = "totalcurrency";
+            varNamespace = "player";
+            public = 1;
+        };
+        class totalfollowers {
+            varName = "totalfollowers";
+            varNamespace = "player";
+            public = 1;
+        };
+        class totalfollowersAssualt {
+            varName = "totalfollowersAssualt";
+            varNamespace = "player";
+            public = 1;
+        };
+        class totalfollowersAT {
+            varName = "totalfollowersAT";
+            varNamespace = "player";
+            public = 1;
+        };
+
+    };
+};

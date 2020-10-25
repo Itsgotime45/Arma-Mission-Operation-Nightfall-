@@ -1,0 +1,54 @@
+//Slay's AI Nerf Script 9/30/2020
+//Version 0.3
+//Sets every AI on the server's skill to either a minimum Skill of 0.3 to a max of 1.0, AND aim accuracy of 0.05 to a max of 0.1.
+  if (DEBUGINFORSLAYSINFO) then {systemchat "Slay's AI Nerf Script Activated!";};
+
+while {isServer || !(isServer)} do {
+sleep 5;
+
+/*{playsound "addItemOK";
+} forEach allPlayers;*/
+/*
+[EAST,//side,
+0.3,//skillMin,
+0.05,//skillAimMin,
+0.8,//skillMax,
+0.05//skillAimMax
+] call BIS_fnc_EXP_camp_setSkill;
+
+[EAST,//side,
+0.3,//skillMin,
+0.05,//skillAimMin,
+0.8,//skillMax,
+0.05//skillAimMax
+] call BIS_fnc_EXP_camp_setSkill;
+
+[WEST,//side,
+3,//skillMin,
+3,//skillAimMin,
+3,//skillMax,
+3//skillAimMax
+] call BIS_fnc_EXP_camp_setSkill;
+
+*/
+
+
+{
+_x setskill ["aimingShake",0.01 + random 0.2];
+_x setskill ["aimingSpeed",0.01 + random 0.2];
+_x setskill ["reloadSpeed",0.01 + random 0.2];
+_x setskill ["spotDistance",0.01 + random 1];
+_x setskill ["spotTime",0.01 + random 1];
+_x setskill ["commanding",0.02 + random 0.1];
+_x setskill ["courage",0.01 + random 0.2];
+} foreach allUnits;
+
+
+
+
+//systemChat "executed";
+
+
+
+
+};
